@@ -1,0 +1,345 @@
+---
+import Base from "../layouts/Base.astro";
+import { STYLES } from "../data/quiz";
+
+const heroImg =
+  "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=75";
+
+const styleList = Object.values(STYLES);
+---
+
+<Base>
+  <!-- ============ HERO ============ -->
+  <section class="hero container">
+    <div class="hero-frame" style={`background-image:url('${heroImg}')`}>
+      <div class="hero-overlay"></div>
+
+      <h1 class="hero-title">Madera<br />que inspira</h1>
+
+      <!-- Tarjeta de texto glass -->
+      <div class="glass glass-text">
+        <p>
+          Materiales de madera y tipo madera que transforman tus espacios.
+          Descubre el estilo que mejor refleja quién eres.
+        </p>
+        <a href="/test" class="btn btn-dark">
+          Hacer el test
+          <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <!-- Tarjeta destacado glass -->
+      <div class="glass glass-feature">
+        <span class="feature-kicker">Showroom · Puebla</span>
+        <p>Más de 6 estilos y cientos de acabados en madera natural y tipo madera.</p>
+      </div>
+
+      <!-- Texto circular -->
+      <div class="spinner" aria-hidden="true">
+        <svg viewBox="0 0 200 200" width="120" height="120">
+          <defs>
+            <path id="circlePath" d="M 100,100 m -74,0 a 74,74 0 1,1 148,0 a 74,74 0 1,1 -148,0" />
+          </defs>
+          <text class="spin-text">
+            <textPath href="#circlePath">
+              · NATURAL · CÁLIDA · ATEMPORAL · NOBLE
+            </textPath>
+          </text>
+        </svg>
+        <span class="spin-dot">🌳</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INTRO TEST ============ -->
+  <section class="section container">
+    <div class="intro-grid">
+      <div>
+        <span class="eyebrow">El Test de Estilo</span>
+        <h2 style="font-size:clamp(2rem,4vw,3.1rem); margin-top:14px;">
+          ¿Qué estilo eres en<br />decoración?
+        </h2>
+      </div>
+      <div class="stack" style="gap:22px;">
+        <p class="lead">
+          7 preguntas rápidas para descubrir tu estilo de interior y exterior.
+          Al terminar verás una galería curada con tu estética y podrás solicitar
+          un presupuesto personalizado con nuestros materiales.
+        </p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="/test" class="btn btn-wood">
+            Comenzar ahora
+            <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#estilos" class="btn btn-ghost">Ver estilos</a>
+        </div>
+        <div class="stat-row">
+          <div><strong>7</strong><span>preguntas</span></div>
+          <div><strong>6</strong><span>estilos</span></div>
+          <div><strong>~2</strong><span>minutos</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ESTILOS ============ -->
+  <section id="estilos" class="section container" style="padding-top:0;">
+    <div class="center" style="margin-bottom:42px;">
+      <span class="pill">Aesthetic</span>
+      <h2 style="font-size:clamp(2rem,4vw,3rem); margin-top:18px;">
+        Los estilos que distribuimos
+      </h2>
+      <p class="lead center" style="margin:14px auto 0;">
+        Cada estilo, con su selección de maderas y acabados tipo madera.
+      </p>
+    </div>
+
+    <div class="styles-grid">
+      {
+        styleList.map((s) => (
+          <article class="style-card">
+            <div class="style-card-img">
+              <img src={s.images[0]} alt={s.name} loading="lazy" />
+            </div>
+            <div class="style-card-body">
+              <h3>{s.name}</h3>
+              <p class="text-muted">{s.tagline}</p>
+              <div class="swatches">
+                {s.palette.map((c) => (
+                  <span style={`background:${c}`} />
+                ))}
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- ============ CTA CONTACTO ============ -->
+  <section id="contacto" class="section container">
+    <div class="cta-band">
+      <h2 style="color:#fff; font-size:clamp(1.9rem,3.5vw,2.8rem);">
+        ¿List@ para darle calidez a tu espacio?
+      </h2>
+      <p style="color:#e7dfd2; max-width:48ch; margin:14px 0 26px;">
+        Haz el test y solicita tu presupuesto sin compromiso. Te respondemos por
+        WhatsApp.
+      </p>
+      <a href="/test" class="btn btn-wood">
+        Hacer el test y pedir presupuesto
+        <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* HERO */
+  .hero {
+    padding-top: 6px;
+  }
+  .hero-frame {
+    position: relative;
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    min-height: clamp(440px, 64vh, 680px);
+    padding: clamp(20px, 4vw, 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(30, 22, 12, 0.05) 0%,
+      rgba(30, 22, 12, 0.25) 100%
+    );
+  }
+  .hero-title {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: clamp(3.4rem, 12vw, 9rem);
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    text-shadow: 0 12px 40px rgba(20, 14, 6, 0.35);
+  }
+  .glass {
+    position: absolute;
+    z-index: 3;
+    background: rgba(28, 24, 18, 0.32);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: var(--r-md);
+    color: #fff;
+    padding: 22px;
+  }
+  .glass-text {
+    left: clamp(16px, 3vw, 34px);
+    bottom: clamp(16px, 3vw, 34px);
+    max-width: 360px;
+  }
+  .glass-text p {
+    font-size: 0.98rem;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+  .glass-feature {
+    right: clamp(16px, 3vw, 34px);
+    top: clamp(16px, 3vw, 34px);
+    max-width: 260px;
+  }
+  .feature-kicker {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .glass-feature p {
+    margin-top: 8px;
+    font-size: 0.92rem;
+  }
+  .spinner {
+    position: absolute;
+    right: clamp(16px, 4vw, 60px);
+    bottom: clamp(16px, 4vw, 50px);
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    animation: spin 18s linear infinite;
+  }
+  .spin-text {
+    font-family: var(--font-display);
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    fill: #fff;
+    font-weight: 600;
+  }
+  .spin-dot {
+    position: absolute;
+    font-size: 1.4rem;
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .spinner {
+      animation: none;
+    }
+  }
+
+  /* INTRO */
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(24px, 5vw, 70px);
+    align-items: start;
+  }
+  .stat-row {
+    display: flex;
+    gap: 38px;
+    margin-top: 8px;
+  }
+  .stat-row div {
+    display: flex;
+    flex-direction: column;
+  }
+  .stat-row strong {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--wood);
+  }
+  .stat-row span {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  /* STYLES GRID */
+  .styles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .style-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .style-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-soft);
+  }
+  .style-card-img {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+  .style-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .style-card:hover .style-card-img img {
+    transform: scale(1.06);
+  }
+  .style-card-body {
+    padding: 20px;
+  }
+  .style-card-body h3 {
+    font-size: 1.3rem;
+  }
+  .style-card-body p {
+    margin-top: 6px;
+    font-size: 0.92rem;
+  }
+  .swatches {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .swatches span {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  /* CTA */
+  .cta-band {
+    background: var(--wood-deep);
+    background-image: radial-gradient(
+      circle at 80% 20%,
+      rgba(184, 137, 90, 0.4),
+      transparent 50%
+    );
+    border-radius: var(--r-lg);
+    padding: clamp(36px, 6vw, 72px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 860px) {
+    .intro-grid,
+    .styles-grid {
+      grid-template-columns: 1fr;
+    }
+    .glass-feature {
+      display: none;
+    }
+  }
+</style>

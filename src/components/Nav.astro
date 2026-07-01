@@ -1,0 +1,26 @@
+---
+const links = [
+  { label: "Inicio", href: "/" },
+  { label: "El Test", href: "/test" },
+  { label: "Estilos", href: "/#estilos" },
+  { label: "Contacto", href: "/#contacto" },
+];
+---
+
+<nav class="nav">
+  <a href="/" class="brand" aria-label="The Woods — inicio">
+    The<span class="mark">Woods</span>
+  </a>
+
+  <div class="nav-links">
+    {links.map((l) => <a href={l.href}>{l.label}</a>)}
+  </div>
+
+  <span class="nav-loc">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"></path>
+      <circle cx="12" cy="10" r="3"></circle>
+    </svg>
+    Puebla, México
+  </span>
+</nav>

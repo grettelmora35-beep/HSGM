@@ -1,0 +1,5 @@
+# Variables para `wrangler pages dev` (preview local del runtime de Cloudflare).
+# Copia este archivo como .dev.vars y rellena los valores.
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxx
+LEAD_TO_EMAIL=gimrgc@gmail.com
+LEAD_FROM_EMAIL=The Woods <onboarding@resend.dev>

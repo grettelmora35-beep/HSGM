@@ -1,0 +1,26 @@
+{
+  "name": "the-woods",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Woods — Distribuidora de materiales de madera y tipo madera en Puebla, México. Test de estilo de decoración + captación de leads.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "wrangler pages dev ./dist",
+    "deploy": "astro build && wrangler pages deploy ./dist",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.2.1",
+    "@astrojs/react": "^4.2.0",
+    "astro": "^5.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "wrangler": "^3.109.0"
+  }
+}

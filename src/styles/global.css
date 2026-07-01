@@ -1,0 +1,288 @@
+/* ============================================================
+   The Woods — Design System
+   Inspirado en la estética Poliform: cálido, neutro, elegante
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  /* Paleta */
+  --cream: #e9e3d7;
+  --cream-deep: #ded7c8;
+  --paper: #ffffff;
+  --panel: #f3efe7;
+  --ink: #1c1a17;
+  --ink-soft: #3a3631;
+  --muted: #7a736a;
+  --line: #e4ded2;
+  --wood: #8a6a47;
+  --wood-deep: #5e4630;
+  --accent: #b8895a;
+
+  /* Tipografía */
+  --font-display: "Poppins", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /* Radios y sombras */
+  --r-sm: 10px;
+  --r-md: 18px;
+  --r-lg: 28px;
+  --r-xl: 40px;
+  --shadow-soft: 0 18px 50px -24px rgba(40, 30, 18, 0.35);
+  --shadow-card: 0 30px 80px -40px rgba(40, 30, 18, 0.45);
+
+  --maxw: 1320px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background-color: var(--cream);
+  background-image: radial-gradient(
+      circle at 20% 10%,
+      rgba(255, 255, 255, 0.35),
+      transparent 45%
+    ),
+    radial-gradient(circle at 85% 30%, rgba(184, 137, 90, 0.08), transparent 40%);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+/* ---------- Shell / contenedor tipo "tarjeta blanca" ---------- */
+.shell {
+  max-width: var(--maxw);
+  margin: 22px auto;
+  background: var(--paper);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 4vw, 56px);
+}
+
+.section {
+  padding-block: clamp(48px, 7vw, 96px);
+}
+
+/* ---------- Nav ---------- */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px clamp(20px, 4vw, 56px);
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.55rem;
+  letter-spacing: -0.04em;
+  display: flex;
+  align-items: center;
+  gap: 0.5ch;
+}
+
+.brand .mark {
+  color: var(--wood);
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(18px, 3vw, 44px);
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.nav-links a {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--wood);
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--ink);
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-loc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.2s ease, color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-dark {
+  background: var(--ink);
+  color: #fff;
+}
+.btn-dark:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+
+.btn-wood {
+  background: var(--wood);
+  color: #fff;
+}
+.btn-wood:hover {
+  background: var(--wood-deep);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+}
+.btn-ghost:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn .arrow {
+  transition: transform 0.2s ease;
+}
+.btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ---------- Eyebrow / pill ---------- */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--ink);
+  color: #d8d1c5;
+  border-radius: var(--r-xl) var(--r-xl) 0 0;
+  margin-top: 40px;
+}
+.footer .container {
+  padding-block: 56px;
+}
+.footer h3 {
+  color: #fff;
+}
+.footer a:hover {
+  color: #fff;
+}
+
+/* ---------- Utilidades ---------- */
+.text-muted {
+  color: var(--muted);
+}
+.lead {
+  font-size: clamp(1.02rem, 1.4vw, 1.18rem);
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+.center {
+  text-align: center;
+}
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 720px) {
+  .shell {
+    margin: 10px;
+    border-radius: var(--r-lg);
+  }
+  .nav-links {
+    display: none;
+  }
+}
