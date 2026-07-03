@@ -1,0 +1,24 @@
+---
+import Base from "../layouts/Base.astro";
+import StyleExplorer from "../components/StyleExplorer.tsx";
+---
+
+<Base>
+  <section class="section container">
+    <div class="center" style="margin-bottom:40px;">
+      <span class="pill">Nuestros estilos</span>
+      <h1 style="font-size:clamp(2.2rem,5vw,3.6rem); margin-top:18px;">
+        Explora los 4 estilos
+      </h1>
+      <p class="lead center" style="margin:14px auto 0; max-width:52ch;">
+        Entra a cada estilo para ver la galería de productos —pisos, lambrines,
+        decks y texturas de madera— que lo definen. No necesitas hacer el test.
+      </p>
+      <a href="/test" class="btn btn-ghost" style="margin-top:24px;">
+        ¿No sabes cuál es el tuyo? Haz el test
+      </a>
+    </div>
+
+    <StyleExplorer client:load />
+  </section>
+</Base>
