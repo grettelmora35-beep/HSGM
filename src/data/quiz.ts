@@ -111,9 +111,9 @@ export const QUESTIONS: Question[] = [
     prompt: "¿Qué lugar te gustaría visitar para descansar?",
     options: [
       { text: "Playa de arena blanca y mar tranquilo", image: u("photo-1590162788208-b0cd453c7720"), weights: { clasico: 1 } },
-      { text: "Bosque con cabaña de madera", image: u("photo-1570793005386-840846445fed"), weights: { calido: 1 } },
+      { text: "Bosque con cabaña de madera", image: u("photo-1638985787285-46f05ff063f2"), weights: { calido: 1 } },
       { text: "Ciudad moderna con rascacielos", image: u("photo-1541447271487-09612b3f49f7"), weights: { contemporaneo: 1 } },
-      { text: "Hotel minimalista de lujo en tonos blancos", image: u("photo-1528908929486-dfaa209c6986"), weights: { minimalista: 1 } },
+      { text: "Hotel minimalista de lujo en tonos blancos", image: u("photo-1748652252546-6bea5d896bd4"), weights: { minimalista: 1 } },
     ],
   },
   {
@@ -121,7 +121,7 @@ export const QUESTIONS: Question[] = [
     prompt: "¿Cuál de estas salas te gustaría tener en tu casa?",
     options: [
       { text: "Rústica con vigas de madera, chimenea y tonos cálidos", image: u("photo-1680703486830-1b5af60635d7"), weights: { calido: 1 } },
-      { text: "Clásica con muebles elegantes en nogal", image: u("photo-1700226034367-2fb120f48dfa"), weights: { clasico: 1 } },
+      { text: "Clásica con muebles elegantes en nogal", image: u("photo-1618582383736-ed9080511254"), weights: { clasico: 1 } },
       { text: "Contemporánea con diseño moderno y contrastes", image: u("photo-1599696848652-f0ff23bc911f"), weights: { contemporaneo: 1 } },
       { text: "Minimalista con líneas limpias y pocos muebles", image: u("photo-1631679706909-1844bbd07221"), weights: { minimalista: 1 } },
     ],
@@ -133,7 +133,7 @@ export const QUESTIONS: Question[] = [
       { text: "Montañas y bosque", image: u("photo-1600257729950-13a634d32697"), weights: { calido: 1 } },
       { text: "Jardín clásico con fuente", image: u("photo-1743020612934-02ebb551fd8e"), weights: { clasico: 1 } },
       { text: "Skyline urbano al atardecer", image: u("photo-1541336032412-2048a678540d"), weights: { contemporaneo: 1 } },
-      { text: "Desierto con arquitectura minimalista", image: u("photo-1503450843813-359b7b07bd36"), weights: { minimalista: 1 } },
+      { text: "Desierto con arquitectura minimalista", image: u("photo-1590912550141-1448da2bd5da"), weights: { minimalista: 1 } },
     ],
   },
   {
@@ -151,9 +151,9 @@ export const QUESTIONS: Question[] = [
     prompt: "¿Qué tipo de terraza prefieres?",
     options: [
       { text: "Pérgola de madera y fogata", image: u("photo-1527359443443-84a48aec73d2"), weights: { calido: 1 } },
-      { text: "Clásica con muebles elegantes y jardín", image: u("photo-1748969721858-85c500eefa78"), weights: { clasico: 1 } },
+      { text: "Clásica con muebles elegantes y jardín", image: u("photo-1538307602205-80b5c2ff26ec"), weights: { clasico: 1 } },
       { text: "Rooftop moderno con iluminación contemporánea", image: u("photo-1758193431353-87812fbff5cd"), weights: { contemporaneo: 1 } },
-      { text: "Minimalista con concreto y tonos claros", image: u("photo-1763454787466-1b44ded32e68"), weights: { minimalista: 1 } },
+      { text: "Minimalista con concreto y tonos claros", image: u("photo-1554700124-538d459fc050"), weights: { minimalista: 1 } },
     ],
   },
 ];
