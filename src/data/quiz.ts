@@ -160,7 +160,7 @@ export const QUESTIONS: Question[] = [
       { text: "Abierto, luminoso y ordenado", image: u("photo-1701422055895-331344238120"), weights: { minimalista: 2, contemporaneo: 1 } },
       { text: "Acogedor, con lambrín de madera", image: u("photo-1701421047872-d61f8962d682"), weights: { calido: 2, escandinavo: 1 } },
       { text: "Amplio, con grandes ventanales", image: u("photo-1560185008-b033106af5c3"), weights: { contemporaneo: 2, minimalista: 1 } },
-      { text: "Con carácter y lambrín oscuro", image: u("photo-1543751416-705d3e34d02a"), weights: { industrial: 2 } },
+      { text: "Con carácter y lambrín de madera", image: u("photo-1722353016700-b88171f87839"), weights: { industrial: 2 } },
     ],
   },
   {
@@ -171,17 +171,17 @@ export const QUESTIONS: Question[] = [
       { text: "Roble claro mate, sereno", image: u("photo-1611072337226-1140ab367200"), weights: { escandinavo: 2, minimalista: 1 } },
       { text: "Nogal natural, cálido y vivo", image: u("photo-1582055193464-943584223be1"), weights: { contemporaneo: 2, calido: 1 } },
       { text: "Madera oscura, profunda y noble", image: u("photo-1502639625928-9e0198ae7dfb"), weights: { clasico: 2, industrial: 1 } },
-      { text: "Madera recuperada con historia", image: u("photo-1531914082256-1b9047242426"), weights: { calido: 2, industrial: 1 } },
+      { text: "Piso SPC, resistente y cálido", image: u("photo-1649083048770-82e8ffd80431"), weights: { calido: 2, industrial: 1 } },
     ],
   },
   {
     id: "atmosfera",
     prompt: "La atmósfera que buscas es...",
     options: [
-      { text: "Calma y equilibrio", image: u("photo-1548268364-3acee266b695"), weights: { minimalista: 2, escandinavo: 1 } },
-      { text: "Energía y personalidad", image: u("photo-1508920052992-6f5a921eba78"), weights: { industrial: 2, contemporaneo: 1 } },
-      { text: "Calidez y confort", image: u("photo-1725613102061-108a021435c3"), weights: { calido: 2, escandinavo: 1 } },
-      { text: "Sofisticación atemporal", image: u("photo-1701422522223-355c7a6f5648"), weights: { clasico: 2, contemporaneo: 1 } },
+      { text: "Cálida y rústica", image: u("photo-1680703486830-1b5af60635d7"), weights: { minimalista: 2, escandinavo: 1 } },
+      { text: "Rústica pero moderna", image: u("photo-1600210492493-0946911123ea"), weights: { industrial: 2, contemporaneo: 1 } },
+      { text: "Acogedora, con acentos de madera y LEDs", image: u("photo-1663811397219-c572550dffc5"), weights: { calido: 2, escandinavo: 1 } },
+      { text: "Habitación rústica moderna", image: u("photo-1727706572437-4fcda0cbd66f"), weights: { clasico: 2, contemporaneo: 1 } },
     ],
   },
   {
