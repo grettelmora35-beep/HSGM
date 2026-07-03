@@ -110,8 +110,8 @@ export const QUESTIONS: Question[] = [
     id: "lugar",
     prompt: "¿Qué lugar te gustaría visitar para descansar?",
     options: [
-      { text: "Playa de arena blanca y mar tranquilo", image: u("photo-1590162788208-b0cd453c7720"), weights: { clasico: 1 } },
-      { text: "Bosque con cabaña de madera", image: u("photo-1638985787285-46f05ff063f2"), weights: { calido: 1 } },
+      { text: "Playa de arena blanca y mar tranquilo", image: u("photo-1551523713-c1473aa01d9f"), weights: { clasico: 1 } },
+      { text: "Bosque con cabaña de madera", image: u("photo-1595521624992-48a59aef95e3"), weights: { calido: 1 } },
       { text: "Ciudad moderna con rascacielos", image: u("photo-1541447271487-09612b3f49f7"), weights: { contemporaneo: 1 } },
       { text: "Hotel minimalista de lujo en tonos blancos", image: u("photo-1748652252546-6bea5d896bd4"), weights: { minimalista: 1 } },
     ],
@@ -151,7 +151,7 @@ export const QUESTIONS: Question[] = [
     prompt: "¿Qué tipo de terraza prefieres?",
     options: [
       { text: "Pérgola de madera y fogata", image: u("photo-1527359443443-84a48aec73d2"), weights: { calido: 1 } },
-      { text: "Clásica con muebles elegantes y jardín", image: u("photo-1538307602205-80b5c2ff26ec"), weights: { clasico: 1 } },
+      { text: "Clásica con muebles elegantes y jardín", image: u("photo-1623625434531-d130448273c1"), weights: { clasico: 1 } },
       { text: "Rooftop moderno con iluminación contemporánea", image: u("photo-1758193431353-87812fbff5cd"), weights: { contemporaneo: 1 } },
       { text: "Minimalista con concreto y tonos claros", image: u("photo-1554700124-538d459fc050"), weights: { minimalista: 1 } },
     ],
