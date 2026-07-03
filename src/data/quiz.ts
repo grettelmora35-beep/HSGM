@@ -147,9 +147,9 @@ export const QUESTIONS: Question[] = [
     prompt: "¿Qué paleta te hace sentir en casa?",
     helper: "Elige la textura de madera que más te atraiga a primera vista.",
     options: [
-      { text: "Neutros arena y maderas cálidas", image: u("photo-1619976553860-b7ffbe9a093b"), weights: { contemporaneo: 2, escandinavo: 1 } },
-      { text: "Blancos puros y grises suaves", image: u("photo-1506689205310-0a29c388691c"), weights: { minimalista: 2, escandinavo: 1 } },
-      { text: "Terracota, ocre y madera con veta", image: u("photo-1621295693450-080546d2ec8e"), weights: { calido: 2, clasico: 1 } },
+      { text: "Nogal clásico, cálido y noble", image: u("photo-1727670373816-7475b30e542d"), weights: { contemporaneo: 2, escandinavo: 1 } },
+      { text: "Blancos y grises tipo madera", image: u("photo-1675783453128-cdb7ffad8595"), weights: { minimalista: 2, escandinavo: 1 } },
+      { text: "Terracota, parota y ocre", image: u("photo-1625496235025-d783abf061c8"), weights: { calido: 2, clasico: 1 } },
       { text: "Negros, grises y tonos profundos", image: u("photo-1525947088131-b701cd0f6dc3"), weights: { industrial: 2, clasico: 1 } },
     ],
   },

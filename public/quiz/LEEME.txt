@@ -1,0 +1,7 @@
+Guarda aquí las dos imágenes del test como:
+
+  pregunta2d.jpg   -> Pregunta 2, respuesta D (lambrín en sala moderna)
+  pregunta3d.jpg   -> Pregunta 3, respuesta D (piso SPC en un espacio)
+
+Deben llamarse EXACTAMENTE así (en minúsculas, con .jpg).
+Si tus archivos son .png, guárdalos igual pero avísame para ajustar la extensión en el código.
