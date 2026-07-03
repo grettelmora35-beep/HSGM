@@ -48,12 +48,12 @@ export const STYLES: Record<StyleId, StyleProfile> = {
     materials: ["Roble blanqueado", "Piso SPC tono claro", "Laminado gris/arena", "Chapa de madera lisa"],
     palette: ["#f4f1ec", "#e3ddd2", "#c9bca6", "#8d8479"],
     images: [
+      u("photo-1628744876497-eb30460be9f6"),
+      u("photo-1629292116668-921112f088db"),
+      u("photo-1575204015311-0fe377370780"),
       u("photo-1631679706909-1844bbd07221"),
-      u("photo-1675783453128-cdb7ffad8595"),
-      u("photo-1519393890420-f28727375fa5"),
-      u("photo-1591195853841-2f450cbfc7c9"),
-      u("photo-1506689205310-0a29c388691c"),
-      u("photo-1547044479-59ce6c0a784a"),
+      u("photo-1597665863042-47e00964d899"),
+      u("photo-1611072337226-1140ab367200"),
     ],
   },
   calido: {
