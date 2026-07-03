@@ -65,12 +65,12 @@ export const STYLES: Record<StyleId, StyleProfile> = {
     materials: ["Madera maciza con veta", "Vigas tipo madera", "Parota / Mezquite", "Piso rústico con nudos", "Pérgola de madera"],
     palette: ["#b5764a", "#8a4f2d", "#d9a679", "#5e4630"],
     images: [
+      u("photo-1680703486830-1b5af60635d7"),
+      u("photo-1698933787134-af2d451985c7"),
+      u("photo-1560184897-0e5d96d86acd"),
+      u("photo-1631555542605-877a63b6e3a6"),
+      u("photo-1547998872-71a44f061d5a"),
       u("photo-1625496235025-d783abf061c8"),
-      u("photo-1582055193464-943584223be1"),
-      u("photo-1531914082256-1b9047242426"),
-      u("photo-1487266659293-c4762f375955"),
-      u("photo-1621295693450-080546d2ec8e"),
-      u("photo-1527359443443-84a48aec73d2"),
     ],
   },
   clasico: {
