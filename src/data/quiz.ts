@@ -82,12 +82,12 @@ export const STYLES: Record<StyleId, StyleProfile> = {
     materials: ["Nogal oscuro", "Caoba / Cerezo", "Boiserie tipo madera", "Piso de ingeniería oscuro", "Espiga (herringbone)"],
     palette: ["#4a3322", "#6f4a2c", "#a9794a", "#e0cdaf"],
     images: [
-      u("photo-1617972582658-45dd3162f128"),
-      u("photo-1739918075668-fc7844c6d921"),
-      u("photo-1635108197332-54105c0ec888"),
-      u("photo-1615962835702-d8afff0b05d4"),
-      u("photo-1690983321303-f510e0575644"),
-      u("photo-1727670373816-7475b30e542d"),
+      u("photo-1632120377007-c2adc3017b1e"),
+      u("photo-1696413542101-2479dd479982"),
+      u("photo-1676088933950-bae87cf34fee"),
+      u("photo-1616046619793-7e4badf3fe1f"),
+      u("photo-1739918069081-78dddf3240a6"),
+      u("photo-1664188371127-3a53ce32daaa"),
     ],
   },
 };
