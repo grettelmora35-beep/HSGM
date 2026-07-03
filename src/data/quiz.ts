@@ -31,12 +31,12 @@ export const STYLES: Record<StyleId, StyleProfile> = {
     materials: ["Nogal natural", "Roble claro mate", "Lambrín tipo madera ranurada", "Piso de ingeniería", "Deck de exterior"],
     palette: ["#d8c7ab", "#a78458", "#6f5536", "#efe9dd"],
     images: [
-      u("photo-1701422055895-331344238120"),
-      u("photo-1580064555553-3fa4c6e085da"),
-      u("photo-1759751104723-db7134de4d5f"),
-      u("photo-1599696848652-f0ff23bc911f"),
-      u("photo-1560185008-b033106af5c3"),
-      u("photo-1611072337226-1140ab367200"),
+      u("photo-1630581630833-27c2b470e9cc"),
+      u("photo-1722353016700-b88171f87839"),
+      u("photo-1622372738946-62e02505feb3"),
+      u("photo-1660147260523-dff57ff6cbf8"),
+      u("photo-1634822930432-0594057fdff2"),
+      u("photo-1630585308572-f53438fc684f"),
     ],
   },
   minimalista: {
