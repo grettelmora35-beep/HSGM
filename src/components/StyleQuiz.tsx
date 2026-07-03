@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   QUESTIONS,
   STYLES,
@@ -38,6 +38,17 @@ export default function StyleQuiz() {
 
   const [presupuesto, setPresupuesto] = useState("");
   const [mensaje, setMensaje] = useState("");
+  const [modalStyle, setModalStyle] = useState<StyleId | null>(null);
+
+  // Cerrar el modal de estilo con la tecla Escape.
+  useEffect(() => {
+    if (!modalStyle) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setModalStyle(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [modalStyle]);
 
   const result = useMemo(() => {
     if (phase !== "result") return null;
@@ -78,16 +89,18 @@ export default function StyleQuiz() {
     setAnswers([]);
     setPresupuesto("");
     setMensaje("");
+    setModalStyle(null);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   // Arma el enlace directo a WhatsApp con el resultado del test precargado.
-  function whatsappHref(): string {
-    if (!winner) return `https://wa.me/${WHATSAPP_NUMBER}`;
+  function whatsappHref(styleName?: string): string {
+    const nombre = styleName ?? winner?.name;
+    if (!nombre) return `https://wa.me/${WHATSAPP_NUMBER}`;
     const lineas = [
       `¡Hola The Woods! 👋 Acabo de hacer el test de estilo.`,
       ``,
-      `Mi estilo es: *${winner.name}*.`,
+      `Me interesa el estilo: *${nombre}*.`,
       `Me gustaría recibir más información y una propuesta.`,
     ];
     if (presupuesto) lineas.push(``, `Presupuesto estimado: ${presupuesto}.`);
@@ -235,19 +248,25 @@ export default function StyleQuiz() {
 
           <aside className="result-ranking">
             <span className="result-tag-label">Tu afinidad</span>
+            <p className="rank-hint">Toca un estilo para ver sus productos ↓</p>
             {result.ranking.map((r) => {
               const max = result.ranking[0].score || 1;
               const pct = Math.round((r.score / max) * 100);
               return (
-                <div className="rank-row" key={r.id}>
+                <button
+                  className="rank-row"
+                  key={r.id}
+                  onClick={() => setModalStyle(r.id)}
+                  aria-label={`Ver productos del estilo ${STYLES[r.id].name}`}
+                >
                   <div className="rank-top">
                     <span>{STYLES[r.id].name}</span>
-                    <span className="rank-pct">{pct}%</span>
+                    <span className="rank-pct">{pct}% ›</span>
                   </div>
                   <div className="rank-bar">
                     <span style={{ width: `${pct}%` }} />
                   </div>
-                </div>
+                </button>
               );
             })}
           </aside>
@@ -313,6 +332,66 @@ export default function StyleQuiz() {
             </div>
           </div>
         </div>
+
+        {/* Modal: galería de productos por estilo */}
+        {modalStyle &&
+          (() => {
+            const s = STYLES[modalStyle];
+            return (
+              <div
+                className="style-modal"
+                onClick={() => setModalStyle(null)}
+              >
+                <div
+                  className="style-modal-card"
+                  onClick={(e) => e.stopPropagation()}
+                  role="dialog"
+                  aria-modal="true"
+                >
+                  <button
+                    className="style-modal-close"
+                    onClick={() => setModalStyle(null)}
+                    aria-label="Cerrar"
+                  >
+                    ×
+                  </button>
+                  <span className="eyebrow">Estilo · productos</span>
+                  <h3 className="style-modal-name">{s.name}</h3>
+                  <p className="result-tagline" style={{ marginBottom: 18 }}>
+                    {s.tagline}
+                  </p>
+                  <div className="style-modal-grid">
+                    {s.images.slice(0, 6).map((src, i) => (
+                      <img
+                        key={i}
+                        src={src}
+                        alt={`${s.name} ${i + 1}`}
+                        loading="lazy"
+                        onError={(e) => imgFallback(e, `${s.id}-modal-${i}`)}
+                      />
+                    ))}
+                  </div>
+                  <div className="chips" style={{ marginTop: 18 }}>
+                    {s.materials.map((m) => (
+                      <span key={m} className="chip">
+                        {m}
+                      </span>
+                    ))}
+                  </div>
+                  <a
+                    className="btn btn-wa"
+                    href={whatsappHref(s.name)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ marginTop: 22 }}
+                  >
+                    <WhatsAppIcon />
+                    Cotizar productos {s.name}
+                  </a>
+                </div>
+              </div>
+            );
+          })()}
       </div>
     );
   }
