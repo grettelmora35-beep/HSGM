@@ -199,6 +199,22 @@ export default function StyleQuiz() {
           <p className="result-tagline">{winner.tagline}</p>
         </div>
 
+        {/* CTA principal — visible al terminar, sin necesidad de bajar */}
+        <div className="result-cta-top">
+          <a
+            className="btn btn-wa"
+            href={whatsappHref()}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <WhatsAppIcon />
+            Cotizar por WhatsApp
+          </a>
+          <a className="result-cta-detail" href="#presupuesto">
+            Ver detalle y presupuesto ↓
+          </a>
+        </div>
+
         {/* Galería en grid estilo editorial */}
         <div className="result-gallery">
           {winner.images.map((src, i) => (
