@@ -16,6 +16,8 @@ export interface StyleProfile {
   materials: string[];
   palette: string[];
   images: string[];
+  /** Galería ampliada (~15 fotos) para el modal de cada estilo. */
+  gallery: string[];
 }
 
 const u = (id: string) =>
@@ -38,6 +40,23 @@ export const STYLES: Record<StyleId, StyleProfile> = {
       u("photo-1634822930432-0594057fdff2"),
       u("photo-1630585308572-f53438fc684f"),
     ],
+    gallery: [
+      u("photo-1630581630833-27c2b470e9cc"),
+      u("photo-1722353016700-b88171f87839"),
+      u("photo-1622372738946-62e02505feb3"),
+      u("photo-1660147260523-dff57ff6cbf8"),
+      u("photo-1634822930432-0594057fdff2"),
+      u("photo-1630585308572-f53438fc684f"),
+      u("photo-1585264550534-7890a89b7270"),
+      u("photo-1502005097973-6a7082348e28"),
+      u("photo-1610177534644-34d881503b83"),
+      u("photo-1628745277874-919d8f8ed03a"),
+      u("photo-1701422055895-331344238120"),
+      u("photo-1580064555553-3fa4c6e085da"),
+      u("photo-1759751104723-db7134de4d5f"),
+      u("photo-1560185008-b033106af5c3"),
+      u("photo-1599696848652-f0ff23bc911f"),
+    ],
   },
   minimalista: {
     id: "minimalista",
@@ -54,6 +73,23 @@ export const STYLES: Record<StyleId, StyleProfile> = {
       u("photo-1631679706909-1844bbd07221"),
       u("photo-1597665863042-47e00964d899"),
       u("photo-1611072337226-1140ab367200"),
+    ],
+    gallery: [
+      u("photo-1628744876497-eb30460be9f6"),
+      u("photo-1629292116668-921112f088db"),
+      u("photo-1575204015311-0fe377370780"),
+      u("photo-1631679706909-1844bbd07221"),
+      u("photo-1597665863042-47e00964d899"),
+      u("photo-1611072337226-1140ab367200"),
+      u("photo-1615800002234-05c4d488696c"),
+      u("photo-1581858726788-75bc0f6a952d"),
+      u("photo-1606654810659-8d4282752758"),
+      u("photo-1630699375895-fe5996d163ee"),
+      u("photo-1523755231516-e43fd2e8dca5"),
+      u("photo-1611269154421-4e27233ac5c7"),
+      u("photo-1616109758169-48a73550fe72"),
+      u("photo-1675783453128-cdb7ffad8595"),
+      u("photo-1519393890420-f28727375fa5"),
     ],
   },
   calido: {
@@ -72,6 +108,23 @@ export const STYLES: Record<StyleId, StyleProfile> = {
       u("photo-1547998872-71a44f061d5a"),
       u("photo-1625496235025-d783abf061c8"),
     ],
+    gallery: [
+      u("photo-1680703486830-1b5af60635d7"),
+      u("photo-1698933787134-af2d451985c7"),
+      u("photo-1560184897-0e5d96d86acd"),
+      u("photo-1631555542605-877a63b6e3a6"),
+      u("photo-1547998872-71a44f061d5a"),
+      u("photo-1625496235025-d783abf061c8"),
+      u("photo-1600210491892-03d54c0aaf87"),
+      u("photo-1664509941658-bb5483d3eba7"),
+      u("photo-1631941150945-837cb81fc7e2"),
+      u("photo-1631630259742-c0f0b17c6c10"),
+      u("photo-1595521624992-48a59aef95e3"),
+      u("photo-1628797279405-8cd6ffdbeb6c"),
+      u("photo-1487266659293-c4762f375955"),
+      u("photo-1621295693450-080546d2ec8e"),
+      u("photo-1531914082256-1b9047242426"),
+    ],
   },
   clasico: {
     id: "clasico",
@@ -88,6 +141,23 @@ export const STYLES: Record<StyleId, StyleProfile> = {
       u("photo-1616046619793-7e4badf3fe1f"),
       u("photo-1739918069081-78dddf3240a6"),
       u("photo-1664188371127-3a53ce32daaa"),
+    ],
+    gallery: [
+      u("photo-1632120377007-c2adc3017b1e"),
+      u("photo-1696413542101-2479dd479982"),
+      u("photo-1676088933950-bae87cf34fee"),
+      u("photo-1616046619793-7e4badf3fe1f"),
+      u("photo-1739918069081-78dddf3240a6"),
+      u("photo-1664188371127-3a53ce32daaa"),
+      u("photo-1617972582658-45dd3162f128"),
+      u("photo-1635108197332-54105c0ec888"),
+      u("photo-1618582383736-ed9080511254"),
+      u("photo-1615962835702-d8afff0b05d4"),
+      u("photo-1727670373816-7475b30e542d"),
+      u("photo-1690983321303-f510e0575644"),
+      u("photo-1502639625928-9e0198ae7dfb"),
+      u("photo-1548268364-3acee266b695"),
+      u("photo-1595327775729-266512319652"),
     ],
   },
 };

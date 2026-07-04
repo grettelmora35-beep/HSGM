@@ -377,7 +377,7 @@ export default function StyleQuiz() {
                     {s.tagline}
                   </p>
                   <div className="style-modal-grid">
-                    {s.images.slice(0, 6).map((src, i) => (
+                    {s.gallery.map((src, i) => (
                       <img
                         key={i}
                         src={src}

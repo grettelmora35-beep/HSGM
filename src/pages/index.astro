@@ -1,11 +1,9 @@
 ---
 import Base from "../layouts/Base.astro";
-import { STYLES } from "../data/quiz";
+import StyleExplorer from "../components/StyleExplorer.tsx";
 
 const heroImg =
   "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=75";
-
-const styleList = Object.values(STYLES);
 ---
 
 <Base>
@@ -90,30 +88,11 @@ const styleList = Object.values(STYLES);
         Los estilos que distribuimos
       </h2>
       <p class="lead center" style="margin:14px auto 0;">
-        Cada estilo, con su selección de maderas y acabados tipo madera.
+        Toca un estilo para ver su galería de productos —madera y tipo madera.
       </p>
     </div>
 
-    <div class="styles-grid">
-      {
-        styleList.map((s) => (
-          <article class="style-card">
-            <div class="style-card-img">
-              <img src={s.images[0]} alt={s.name} loading="lazy" />
-            </div>
-            <div class="style-card-body">
-              <h3>{s.name}</h3>
-              <p class="text-muted">{s.tagline}</p>
-              <div class="swatches">
-                {s.palette.map((c) => (
-                  <span style={`background:${c}`} />
-                ))}
-              </div>
-            </div>
-          </article>
-        ))
-      }
-    </div>
+    <StyleExplorer client:load />
   </section>
 
   <!-- ============ CTA CONTACTO ============ -->
