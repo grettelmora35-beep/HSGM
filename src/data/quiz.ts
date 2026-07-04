@@ -113,7 +113,7 @@ export const QUESTIONS: Question[] = [
       { text: "Playa de arena blanca y mar tranquilo", image: u("photo-1551523713-c1473aa01d9f"), weights: { clasico: 1 } },
       { text: "Bosque con cabaña de madera", image: u("photo-1595521624992-48a59aef95e3"), weights: { calido: 1 } },
       { text: "Ciudad moderna con rascacielos", image: u("photo-1541447271487-09612b3f49f7"), weights: { contemporaneo: 1 } },
-      { text: "Hotel minimalista de lujo en tonos blancos", image: u("photo-1748652252546-6bea5d896bd4"), weights: { minimalista: 1 } },
+      { text: "Hotel minimalista de lujo en tonos blancos", image: u("photo-1728488444816-47abc89d82a4"), weights: { minimalista: 1 } },
     ],
   },
   {
